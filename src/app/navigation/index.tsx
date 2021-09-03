@@ -27,7 +27,7 @@ function Navigation() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
+          tabBarIcon: ({ color, size }) => {
             let iconName: TabIcon = ICONS[route.name];
 
             return <Ionicons name={iconName} size={size} color={color} />;
