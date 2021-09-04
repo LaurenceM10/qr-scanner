@@ -4,7 +4,7 @@ import { RootState } from 'app/store/store';
 interface QRState {
   QRData: {
     id: number;
-    url: string;
+    content: string;
   }[];
 }
 
@@ -16,10 +16,13 @@ const slice = createSlice({
   name: 'QRReducer',
   initialState: initialState,
   reducers: {
-    addQR: (state, { payload }: PayloadAction<{ id: number; url: string }>) => {
+    addQR: (
+      state,
+      { payload }: PayloadAction<{ id: number; content: string }>,
+    ) => {
       state.QRData.push({
         id: payload.id,
-        url: payload.url,
+        content: payload.content,
       });
     },
   },

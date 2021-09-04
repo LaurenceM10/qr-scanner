@@ -2,15 +2,18 @@ const palette = {
   white: '#ffffff',
   red: '#e63445',
   darkRed: '#751a3b',
-  grey: '#d0d0d0',
-  darkGrey: '#979797',
+  green: '#25b429',
+  grey: '#dbdbdb',
+  darkGrey: '#333333',
 };
 
 export const theme = {
   colors: {
-    background: palette.white,
     primary: palette.red,
     secondary: palette.darkRed,
-    cancel: palette.grey,
+    accent: palette.green,
+    background: palette.white,
+    secondaryBackground: palette.grey,
+    text: palette.darkGrey,
   },
 };
