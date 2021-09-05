@@ -69,13 +69,11 @@ function ReadQRScreen() {
         />
         {scanned && (
           <View style={styles.scanButtonContainer}>
-            <View style={{}}>
-              <TouchableHighlight
-                onPress={() => setScanned(false)}
-                style={styles.scanButton}>
-                <Text style={styles.scanButtonText}>Scan Again</Text>
-              </TouchableHighlight>
-            </View>
+            <TouchableHighlight
+              onPress={() => setScanned(false)}
+              style={styles.scanButton}>
+              <Text style={styles.scanButtonText}>Scan Again</Text>
+            </TouchableHighlight>
           </View>
         )}
       </View>
