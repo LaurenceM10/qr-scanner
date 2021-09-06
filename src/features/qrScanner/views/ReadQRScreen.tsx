@@ -13,7 +13,7 @@ import { BarCodeScanner, BarCodeScannerResult } from 'expo-barcode-scanner';
 import { theme } from 'app/theme';
 
 // Utils/Hooks
-import useScannerPermission from 'app/hooks/useScannerPermission';
+import { useScannerPermission } from 'app/hooks/useScannerPermission';
 
 // Redux
 import { useAppDispatch } from 'app/store';
@@ -62,7 +62,7 @@ function ReadQRScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.scannerContainer}>
+      <View style={styles.scannerContainer} testID="ScannerContainer">
         <BarCodeScanner
           onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
           style={StyleSheet.absoluteFillObject}

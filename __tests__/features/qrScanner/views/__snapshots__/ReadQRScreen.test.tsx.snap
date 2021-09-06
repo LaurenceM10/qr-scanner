@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReadQRScreen /> should render the ReadQRScreen component when is requesting camera permission 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#333333",
+        "fontSize": 16,
+      }
+    }
+  >
+    Requesting for camera permission
+  </Text>
+</RCTSafeAreaView>
+`;

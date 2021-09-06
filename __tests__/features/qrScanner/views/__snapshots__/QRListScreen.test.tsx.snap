@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QRListScreen /> should render the ReadQRScreen component when there is no permission 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+      "paddingTop": 40,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginBottom": 12,
+        "marginHorizontal": 12,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#f0f0f0",
+          "borderRadius": 12,
+          "flexDirection": "row",
+          "paddingHorizontal": 12,
+          "paddingVertical": 8,
+        }
+      }
+    >
+      <Text />
+      <TextInput
+        allowFontScaling={true}
+        autoFocus={false}
+        onChangeText={[Function]}
+        placeholder="Search"
+        placeholderTextColor="#888"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "color": "#333333",
+            "flex": 1,
+            "padding": 0,
+            "top": 2,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+    testID="NoData"
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "column",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text />
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "marginTop": 12,
+          }
+        }
+      >
+        There is nothing saved yet
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

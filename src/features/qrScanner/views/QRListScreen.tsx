@@ -16,6 +16,8 @@ import { theme } from 'app/theme';
 import { useAppSelector } from 'app/store';
 import { RootState } from 'app/store/store';
 import { QRItem } from 'features/qrScanner/slice/types';
+import NoResults from 'features/qrScanner/views/NoResults';
+import NoData from 'features/qrScanner/views/NoData';
 
 function QRListScreen() {
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -38,17 +40,35 @@ function QRListScreen() {
     </View>
   );
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.searchContainer}>
-        <SearchInput onChange={setSearchTerm} autoFocus={false} />
-      </View>
+  const renderContent = () => {
+    if (searchTerm.length > 0 && !QRList.length) {
+      return <NoResults />;
+    }
+
+    if (!QRList.length) {
+      return <NoData />;
+    }
+
+    return (
       <FlatList
         data={QRList}
         style={styles.list}
         renderItem={renderItem}
         keyExtractor={item => `row-${item.id}`}
       />
+    );
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.searchContainer}>
+        <SearchInput
+          autoFocus={false}
+          placeholder="Search"
+          onChange={setSearchTerm}
+        />
+      </View>
+      {renderContent()}
     </SafeAreaView>
   );
 }

@@ -6,7 +6,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "jest"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.0.5",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@react-native-community/eslint-config": "^3.0.1",
+    "@testing-library/react-native": "^7.2.0",
     "@types/jest": "^27.0.1",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
@@ -41,12 +43,13 @@
   "jest": {
     "preset": "jest-expo",
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules)"
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules)"
     ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
       "js"
-    ]
+    ],
+    "testMatch": ["**/?(*.)+(spec|test).(js|jsx|ts|tsx)"]
   }
 }

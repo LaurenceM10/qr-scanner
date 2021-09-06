@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BarCodeScanner, PermissionStatus } from 'expo-barcode-scanner';
 
-function useScannerPermission(): boolean | null {
+export function useScannerPermission(): boolean | null {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
 
   const requestAccess = async () => {
@@ -16,5 +16,3 @@ function useScannerPermission(): boolean | null {
 
   return hasPermission;
 }
-
-export default useScannerPermission;

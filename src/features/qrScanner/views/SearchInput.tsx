@@ -9,9 +9,15 @@ interface InputProps {
   onChange: React.Dispatch<React.SetStateAction<string>>;
   onFocus?: () => void;
   autoFocus: boolean;
+  placeholder: string;
 }
 
-function InputSearch({ onChange, onFocus, autoFocus }: InputProps) {
+function InputSearch({
+  onChange,
+  onFocus,
+  autoFocus,
+  placeholder,
+}: InputProps) {
   return (
     <View style={styles.container}>
       <Ionicons
@@ -22,7 +28,7 @@ function InputSearch({ onChange, onFocus, autoFocus }: InputProps) {
       />
       <TextInput
         onFocus={onFocus}
-        placeholder="Search"
+        placeholder={placeholder}
         autoFocus={autoFocus}
         onChangeText={onChange}
         style={styles.inputText}
