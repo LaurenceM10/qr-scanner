@@ -21,7 +21,7 @@ function MockBarCodeScanner(
     }
   }, [onBarCodeScanned]);
 
-  return <View accessibilityLabel="scanner" />;
+  return <View />;
 }
 
 jest.mock('expo-barcode-scanner', () => ({

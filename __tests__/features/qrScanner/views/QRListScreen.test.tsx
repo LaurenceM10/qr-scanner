@@ -16,12 +16,6 @@ const QRState = {
 afterEach(cleanup);
 
 describe('<QRListScreen />', function () {
-  it('should render the ReadQRScreen component when there is no permission', function () {
-    const { toJSON } = renderWithRedux(<QRListScreen />);
-
-    expect(toJSON()).toMatchSnapshot();
-  });
-
   it('should render a FlatList of QR items from the redux store', function () {
     const preloadedState = { QRReducer: QRState };
     const { queryByText } = renderWithRedux(<QRListScreen />, {
